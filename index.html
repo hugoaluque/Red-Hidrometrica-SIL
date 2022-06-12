@@ -394,7 +394,14 @@
             metric: true,
         }).addTo(map);
 
-        var miniMap = new L.Control.MiniMap(Google, {
+
+        var goo = new L.tileLayer('https://mt1.google.com/vt/lyrs=y&x={x}&y={y}&z={z}', {
+            foo: 'bar',
+            attribution: '&copy; <a href="https://www.google.at/permissions/geoguidelines/attr-guide.html">Map data ©2015 Google</a>'
+        })
+
+
+        var miniMap = new L.Control.MiniMap(goo, {
             toggleDisplay: true,
             position: 'bottomright',
         }).addTo(map);
