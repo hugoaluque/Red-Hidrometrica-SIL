@@ -337,12 +337,12 @@
             center: [-15.67758, -70.39955],
             zoom: 11,
             zoomControl: false,
-            maxBounds: [
-                //surOeste
-                [-15.847102, -70.026775],
-                //norEste
-                [-15.421305, -70.841130]
-            ],
+            //maxBounds: [
+            //surOeste
+            //  [-15.847102, -70.026775],
+            //norEste
+            //[-15.421305, -70.841130]
+            //],
 
             layers: [OpenStreetMap_Mapnik, Captacion, Distribución]
         });
@@ -416,6 +416,24 @@
             miControl.appendChild(htmlObject);
         }
         addEventListener('load', controlFueraMapa);
+
+        //Adicionando Logo Institucional
+
+        L.Control.Watermark = L.Control.extend({
+            onAdd: function(map) {
+                var img = L.DomUtil.create('img');
+                img.src = '/images/PEBLT.png';
+                img.style.width = '200px';
+                return img;
+            },
+            onRemove: function(map) {},
+        });
+        L.control.watermark = function(opts) {
+            return new L.Control.Watermark(opts);
+        }
+        L.control.watermark({
+            position: 'topright' //bottomright
+        }).addTo(map);
     </script>
 </body>
 
