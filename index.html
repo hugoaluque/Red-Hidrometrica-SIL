@@ -211,25 +211,25 @@
 
         // Varios Mapas Base 
         var Google = L.tileLayer('https://mt1.google.com/vt/lyrs=y&x={x}&y={y}&z={z}', {
-                foo: 'bar',
-                attribution: '&copy; <a href="https://www.google.at/permissions/geoguidelines/attr-guide.html">Map data ©2015 Google</a>'
+                maxZoom: 22
             }),
             OpenStreetMap_Mapnik = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                maxZoom: 19,
-                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                maxZoom: 19
             }),
             CartoDB_DarkMatter = L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
-                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
-                subdomains: 'abcd',
-                maxZoom: 20
+                maxZoom: 19
             });
+
+        //*****************  ATRIBUIONES DE MAPAS Y FUENTES DE DATOS*******************************//	
+        // map.attributionControl.setPrefix('<a style = "font-size: 10px;" href="#" target="_blank">DIAR</a> &middot; <a style = "font-size: 10px;" href="#" title="Proyecto Especial Binacional Lago Titicaca">- PEBLT -</a> &middot;<a  style = "font-size: 10px;" href="https://hugoaluque.github.io/Hector-Hugo-Anamuro-Luque/"target="blank"> By HugoAñamuro</a> ');
+
+
 
         // Varios Marcadores segun Estacion de Aforo
         var Ichocollo = L.marker([-15.66680, -70.82266], {
                 icon: marcador_rojo,
                 draggable: false,
-                title: "Río Ichocollo",
-                attribution: "<a href='https://hugoaluque.github.io/Hector-Hugo-Anamuro-Luque/'target='blank'> HugoAñamuro</a> ",
+                title: "Río Ichocollo"
             }).bindPopup("<iframe width='650' height='350' src='https://datastudio.google.com/embed/reporting/532ddce7-2923-4c65-a12b-8f95c4088471/page/qX5SC' frameborder='0' style='border:0' allowfullscreen></iframe>", {
                 maxWidth: "auto"
             }),
@@ -393,7 +393,7 @@
 
         var goo = new L.tileLayer('https://mt1.google.com/vt/lyrs=y&x={x}&y={y}&z={z}', {
             foo: 'bar',
-            attribution: '&copy; <a href="https://www.google.at/permissions/geoguidelines/attr-guide.html">Map data ©2015 Google</a>'
+
         })
 
 
