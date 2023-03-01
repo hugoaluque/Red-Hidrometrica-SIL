@@ -220,15 +220,12 @@
                 maxZoom: 19
             });
 
-        //*****************  ATRIBUIONES DE MAPAS Y FUENTES DE DATOS*******************************//	
-        // map.attributionControl.setPrefix('<a style = "font-size: 10px;" href="#" target="_blank">DIAR</a> &middot; <a style = "font-size: 10px;" href="#" title="Proyecto Especial Binacional Lago Titicaca">- PEBLT -</a> &middot;<a  style = "font-size: 10px;" href="https://hugoaluque.github.io/Hector-Hugo-Anamuro-Luque/"target="blank"> By HugoAñamuro</a> ');
-
-
-
+        
         // Varios Marcadores segun Estacion de Aforo
         var Ichocollo = L.marker([-15.66680, -70.82266], {
                 icon: marcador_rojo,
                 draggable: false,
+                attribution:'<a style="font-size: 10px;" href="#" target="_blank">Operación y Mantenimiento</a>',
                 title: "Río Ichocollo"
             }).bindPopup("<iframe width='650' height='350' src='https://datastudio.google.com/embed/reporting/532ddce7-2923-4c65-a12b-8f95c4088471/page/qX5SC' frameborder='0' style='border:0' allowfullscreen></iframe>", {
                 maxWidth: "auto"
