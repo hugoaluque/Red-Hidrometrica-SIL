@@ -211,25 +211,27 @@
 
         // Varios Mapas Base 
         var Google = L.tileLayer('https://mt1.google.com/vt/lyrs=y&x={x}&y={y}&z={z}', {
-                maxZoom: 22
+                maxZoom: 22,
+                attribution:'<a style="font-size: 12px;" href="#" target="_blank">© 2023 Google </a>'
             }),
             OpenStreetMap_Mapnik = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                maxZoom: 19
+                maxZoom: 19,
+                attribution:'<a style="font-size: 12px; href="http://openstreetmap.org">OpenStreetMap</a>'
             }),
             CartoDB_DarkMatter = L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
                 maxZoom: 19
             });
-
+            
         
         // Varios Marcadores segun Estacion de Aforo
         var Ichocollo = L.marker([-15.66680, -70.82266], {
                 icon: marcador_rojo,
                 draggable: false,
-                attribution:'<a style="font-size: 10px;" href="#" target="_blank">Operación y Mantenimiento</a>',
+                attribution:'<a style="font-size: 12px;" href="#" target="_blank">Operación y Mantenimiento </a>',
                 title: "Río Ichocollo"
             }).bindPopup("<iframe width='650' height='350' src='https://datastudio.google.com/embed/reporting/532ddce7-2923-4c65-a12b-8f95c4088471/page/qX5SC' frameborder='0' style='border:0' allowfullscreen></iframe>", {
                 maxWidth: "auto"
-            }),
+            }),  
             garganta_larga = L.marker([-15.72068, -70.70347], {
                 icon: marcador_rojo,
                 draggable: false,
@@ -247,6 +249,7 @@
             boca_huataquita = L.marker([-15.65734, -70.46796], {
                 icon: marcador_azul,
                 draggable: false,
+                attribution:'<a style="font-size: 12px;" href="#" target="_blank">Operación y Mantenimiento </a>',
                 title: "Bocatoma Huataquita",
             }).bindPopup("<iframe width='650' height='350' src='https://datastudio.google.com/embed/reporting/5d9cb5f6-5a8a-457d-88ae-5dd450d0bd58/page/qX5SC' frameborder='0' style='border:0' allowfullscreen></iframe>", {
                 maxWidth: "auto"
