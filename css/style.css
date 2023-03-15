@@ -1,0 +1,42 @@
+
+.tabs-example {
+    margin-top: -45px !important;
+    position: absolute;
+  }
+  
+  [role="tab"][aria-selected="true"] {
+    color: #0084ff !important;
+    text-decoration: underline;
+  }
+  
+  [role="tab"] {
+    background: #fff !important;
+    color: gray !important;
+  }
+  
+  .customPopup .leaflet-popup-content-wrapper,
+  .customPopup .leaflet-popup-tip {
+    background: #000;
+    color: #fff;
+  }
+  
+  .customPopup a {
+    color: salmon;
+    text-decoration: none;
+  }
+  
+  .customPopup a:hover {
+    text-decoration: underline;
+  }
+  
+  .description {
+      width: 400px;
+      font-size: 14px;
+      color: #333;
+      padding: 10px 14px;
+      background-color: hsla(0, 0%, 100%, 0.7);
+      box-shadow: 0 0 15px rgb(0 0 0 / 20%);
+      border-radius: 5px;
+      line-height: 120%;
+      border: 1px solid grey;
+    }

@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="css/app.css">
     <link rel="stylesheet" href="css/leaflet-search.css" />
     <link rel="stylesheet" href="css/Control.MiniMap.css" />
-
+    <link rel="stylesheet" href="css/style.css">
 
     <link rel="apple-touch-icon" sizes="76x76" href="images/favicon-76.png">
     <link rel="apple-touch-icon" sizes="120x120" href="images/favicon-120.png">
@@ -50,7 +50,7 @@
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand" href="#">Red Hidrométrica</a>
+                <a class="navbar-brand" href="#">Selecciona el Punto de Aforo de Interes</a>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
@@ -66,7 +66,7 @@
             <div class="sidebar-wrapper">
                 <div class="panel panel-default" id="features">
                     <div class="panel-heading">
-                        <h3 class="panel-title">Punto de Aforo
+                        <h3 class="panel-title">Puntos de Aforo
                             <button type="button" class="btn btn-xs btn-default pull-right" id="sidebar-hide-btn"><i class="fa fa-chevron-left"></i></button></h3>
                     </div>
 
@@ -229,21 +229,21 @@
                 draggable: false,
                 attribution:'<a style="font-size: 12px;" href="#" target="_blank">Operación y Mantenimiento </a>',
                 title: "Río Ichocollo"
-            }).bindPopup("<iframe width='650' height='350' src='https://datastudio.google.com/embed/reporting/532ddce7-2923-4c65-a12b-8f95c4088471/page/qX5SC' frameborder='0' style='border:0' allowfullscreen></iframe>", {
+            }).bindPopup("<iframe width='600' height='310' src='https://lookerstudio.google.com/embed/reporting/532ddce7-2923-4c65-a12b-8f95c4088471/page/qX5SC' frameborder='0' style='border:0' allowfullscreen></iframe> ", {
                 maxWidth: "auto"
             }),  
             garganta_larga = L.marker([-15.72068, -70.70347], {
                 icon: marcador_rojo,
                 draggable: false,
                 title: "Aforador Garganta Larga",
-            }).bindPopup("<iframe width='650' height='350' src='https://datastudio.google.com/embed/reporting/a576f07e-f55c-41d2-8161-83497f5c1e6d/page/qX5SC' frameborder='0' style='border:0' allowfullscreen></iframe>", {
+            }).bindPopup("<iframe width='600' height='310' src='https://datastudio.google.com/embed/reporting/a576f07e-f55c-41d2-8161-83497f5c1e6d/page/qX5SC' frameborder='0' style='border:0' allowfullscreen></iframe>", {
                 maxWidth: "auto"
             }),
             boca_cabana_mañazo = L.marker([-15.65959, -70.46939], {
                 icon: marcador_rojo,
                 draggable: false,
                 title: "Bocatoma Cabana - Mañazo",
-            }).bindPopup("<iframe width='650' height='350' src='https://datastudio.google.com/embed/reporting/be0b3fe5-cfed-4f9d-9632-46668e0ab318/page/qX5SC' frameborder='0' style='border:0' allowfullscreen></iframe>", {
+            }).bindPopup("<iframe width='600' height='310' src='https://datastudio.google.com/embed/reporting/be0b3fe5-cfed-4f9d-9632-46668e0ab318/page/qX5SC' frameborder='0' style='border:0' allowfullscreen></iframe>", {
                 maxWidth: "auto"
             }),
             boca_huataquita = L.marker([-15.65734, -70.46796], {
@@ -251,63 +251,63 @@
                 draggable: false,
                 attribution:'<a style="font-size: 12px;" href="#" target="_blank">Operación y Mantenimiento </a>',
                 title: "Bocatoma Huataquita",
-            }).bindPopup("<iframe width='650' height='350' src='https://datastudio.google.com/embed/reporting/5d9cb5f6-5a8a-457d-88ae-5dd450d0bd58/page/qX5SC' frameborder='0' style='border:0' allowfullscreen></iframe>", {
+            }).bindPopup("<iframe width='600' height='310' src='https://datastudio.google.com/embed/reporting/5d9cb5f6-5a8a-457d-88ae-5dd450d0bd58/page/qX5SC' frameborder='0' style='border:0' allowfullscreen></iframe>", {
                 maxWidth: "auto"
             }),
             captacion_huataquita = L.marker([-15.67904, -70.40971], {
                 icon: marcador_azul,
                 draggable: false,
                 title: "Captación Huataquita - Callapoca",
-            }).bindPopup("<iframe width='650' height='350' src='https://datastudio.google.com/embed/reporting/79029ba9-6be8-41a9-8e2b-d00f79809adb/page/qX5SC' frameborder='0' style='border:0' allowfullscreen></iframe>", {
+            }).bindPopup("<iframe width='600' height='310' src='https://datastudio.google.com/embed/reporting/79029ba9-6be8-41a9-8e2b-d00f79809adb/page/qX5SC' frameborder='0' style='border:0' allowfullscreen></iframe>", {
                 maxWidth: "auto"
             }),
             bocatoma_cabanilla = L.marker([-15.67103, -70.38460], {
                 icon: marcador_azul,
                 draggable: false,
                 title: "Bocatoma Cabanilla",
-            }).bindPopup("<iframe width='650' height='350' src='https://datastudio.google.com/embed/reporting/819988fc-fbd0-4f4b-9aff-0f4e19cc49c4/page/qX5SC' frameborder='0' style='border:0' allowfullscreen></iframe>", {
+            }).bindPopup("<iframe width='600' height='310' src='https://datastudio.google.com/embed/reporting/819988fc-fbd0-4f4b-9aff-0f4e19cc49c4/page/qX5SC' frameborder='0' style='border:0' allowfullscreen></iframe>", {
                 maxWidth: "auto"
             }),
             canal_cabana = L.marker([-15.70628, -70.35953], {
                 icon: marcador_azul,
                 draggable: false,
                 title: "Canal Principal Cabana",
-            }).bindPopup("<iframe width='650' height='350' src='https://datastudio.google.com/embed/reporting/737ed00c-5b58-42a9-8444-cbbafe8102f8/page/qX5SC' frameborder='0' style='border:0' allowfullscreen></iframe>", {
+            }).bindPopup("<iframe width='600' height='310' src='https://datastudio.google.com/embed/reporting/737ed00c-5b58-42a9-8444-cbbafe8102f8/page/qX5SC' frameborder='0' style='border:0' allowfullscreen></iframe>", {
                 maxWidth: "auto"
             }),
             canal_mañazo = L.marker([-15.70673, -70.35971], {
                 icon: marcador_azul,
                 draggable: false,
                 title: "Canal Principal Mañazo",
-            }).bindPopup("<iframe width='650' height='350' src='https://datastudio.google.com/embed/reporting/d21cf873-79d6-457c-8ba4-c7576a0e5a9c/page/qX5SC' frameborder='0' style='border:0' allowfullscreen></iframe>", {
+            }).bindPopup("<iframe width='600' height='310' src='https://datastudio.google.com/embed/reporting/d21cf873-79d6-457c-8ba4-c7576a0e5a9c/page/qX5SC' frameborder='0' style='border:0' allowfullscreen></iframe>", {
                 maxWidth: "auto"
             }),
             bocatoma_yanarico = L.marker([-15.62643, -70.33333], {
                 icon: marcador_azul,
                 draggable: false,
                 title: "Bocatoma Yanarico",
-            }).bindPopup("<iframe width='650' height='350' src='https://datastudio.google.com/embed/reporting/863d79c1-b609-48aa-9c7f-11bc94147cf0/page/qX5SC' frameborder='0' style='border:0' allowfullscreen></iframe>", {
+            }).bindPopup("<iframe width='600' height='310' src='https://datastudio.google.com/embed/reporting/863d79c1-b609-48aa-9c7f-11bc94147cf0/page/qX5SC' frameborder='0' style='border:0' allowfullscreen></iframe>", {
                 maxWidth: "auto"
             }),
             bocatoma_yocara = L.marker([-15.59562, -70.29974], {
                 icon: marcador_azul,
                 draggable: false,
                 title: "Bocatoma Yocará",
-            }).bindPopup("<iframe width='650' height='350' src='https://datastudio.google.com/embed/reporting/ab16556c-6c20-4002-90a7-d99c047374b0/page/qX5SC' frameborder='0' style='border:0' allowfullscreen></iframe>", {
+            }).bindPopup("<iframe width='600' height='310' src='https://datastudio.google.com/embed/reporting/ab16556c-6c20-4002-90a7-d99c047374b0/page/qX5SC' frameborder='0' style='border:0' allowfullscreen></iframe>", {
                 maxWidth: "auto"
             }),
             bocatoma_canteria = L.marker([-15.55887, -70.26945], {
                 icon: marcador_azul,
                 draggable: false,
                 title: "Bocatoma Canteria",
-            }).bindPopup("<iframe width='650' height='350' src='https://datastudio.google.com/embed/reporting/3fbba1ab-9326-40e8-a348-3e7c3af06de0/page/qX5SC' frameborder='0' style='border:0' allowfullscreen></iframe>", {
+            }).bindPopup("<iframe width='600' height='310' src='https://datastudio.google.com/embed/reporting/3fbba1ab-9326-40e8-a348-3e7c3af06de0/page/qX5SC' frameborder='0' style='border:0' allowfullscreen></iframe>", {
                 maxWidth: "auto"
             }),
             captacion_sedaj = L.marker([-15.46719, -70.10607], {
                 icon: marcador_azul,
                 draggable: false,
                 title: "Captación Seda Juliaca",
-            }).bindPopup("<iframe width='650' height='350' src='https://datastudio.google.com/embed/reporting/30c22d30-ec24-4af1-aef9-de74b721b047/page/qX5SC' frameborder='0' style='border:0' allowfullscreen></iframe>", {
+            }).bindPopup("<iframe width='600' height='310' src='https://datastudio.google.com/embed/reporting/30c22d30-ec24-4af1-aef9-de74b721b047/page/qX5SC' frameborder='0' style='border:0' allowfullscreen></iframe>", {
                 maxWidth: "auto"
             })
 
@@ -348,12 +348,12 @@
             position: 'topleft'
         }).addTo(map);
         //GEOLOCALIZADOR
-        var ubicacion = L.control.locate({
-            position: 'topleft',
-            strings: {
-                title: "Buscar mi Ubicación"
-            }
-        }).addTo(map);
+        // var ubicacion = L.control.locate({
+        //     position: 'topleft',
+        //     strings: {
+        //         title: "Buscar mi Ubicación"
+        //     }
+        // }).addTo(map);
 
         // Agrupando los Mapas Base
         var baseMaps = {
@@ -430,6 +430,19 @@
         L.control.watermark({
             position: 'topright' //bottomright
         }).addTo(map);
+
+       // create info legend
+        const legend = L.control({ position: "bottomleft" });
+
+        legend.onAdd = function () {
+        let div = L.DomUtil.create("div", "description");
+        L.DomEvent.disableClickPropagation(div);
+        const text =
+            "<b>Importante 🚨 </b><br><br>Se presenta aqui la Red de Puntos de Aforo ";
+        div.insertAdjacentHTML("beforeend", text);
+        return div;
+        };
+        legend.addTo(map);
     </script>
 </body>
 
