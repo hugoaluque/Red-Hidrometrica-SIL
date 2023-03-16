@@ -225,13 +225,24 @@
         
         // Varios Marcadores segun Estacion de Aforo
         var Ichocollo = L.marker([-15.66680, -70.82266], {
-                icon: marcador_rojo,
-                draggable: false,
-                attribution:'<a style="font-size: 12px;" href="#" target="_blank">Operación y Mantenimiento </a>',
-                title: "Río Ichocollo"
-            }).bindPopup("<iframe width='600' height='310' src='https://lookerstudio.google.com/embed/reporting/532ddce7-2923-4c65-a12b-8f95c4088471/page/qX5SC' frameborder='0' style='border:0' allowfullscreen></iframe> ", {
-                maxWidth: "auto"
-            }),  
+            icon: marcador_rojo,
+            draggable: false,
+            attribution:'<a style="font-size: 12px;" href="#" target="_blank">Operación y Mantenimiento </a>',
+            title: "Río Ichocollo"
+            }).bindPopup('<div class="popup-tabs">' +
+            '<ul class="nav nav-tabs">' +
+            '<li class="active"><a href="#tab1" data-toggle="tab">Caudal</a></li>' +
+            '<li><a href="#tab2" data-toggle="tab">Volumen</a></li>' +
+            '<li><a href="#tab3" data-toggle="tab">Información Extra</a></li>' +
+            '</ul>' +
+            '<div class="tab-content">' +
+            '<div class="tab-pane active" id="tab1"><iframe width="600" height="310" src="https://lookerstudio.google.com/embed/reporting/532ddce7-2923-4c65-a12b-8f95c4088471/page/qX5SC" frameborder="0" style="border:0" allowfullscreen></iframe></div>' +
+            '<div class="tab-pane" id="tab2"><div class="entry-img"> <img width="600" height="310" src="https://diar-peblt.github.io/Presa-Lagunillas/assets/img/404/404.gif" alt="" class="img-fluid"> </div> <h2 class="entry-title"> Sección en Construcción </h2></div>' +
+            '<div class="tab-pane" id="tab3"><div class="entry-img"> <img width="600" height="310" src="https://diar-peblt.github.io/Presa-Lagunillas/assets/img/404/404.gif" alt="" class="img-fluid"> </div> <h2 class="entry-title"> Sección en Construcción </h2></div>' +
+            '</div>' +
+            '</div>', {
+            maxWidth: "auto"
+            }); 
             garganta_larga = L.marker([-15.72068, -70.70347], {
                 icon: marcador_rojo,
                 draggable: false,
