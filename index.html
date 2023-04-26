@@ -207,29 +207,36 @@
             //popupAnchor: [-3, -76] // point from which the popup should open relative to the iconAnchor
         });
 
-
+        var marcador_amarillo = L.icon({
+            iconUrl: "./images/yellow_c_marker.png",
+            iconSize: [20, 20], // size of the icon
+            //shadowSize: [50, 64], // size of the shadow
+            //iconAnchor: [22, 94], // point of the icon which will correspond to marker's location
+            //shadowAnchor: [4, 62], // the same for the shadow
+            //popupAnchor: [-3, -76] // point from which the popup should open relative to the iconAnchor
+        });
 
         // Varios Mapas Base 
         var Google = L.tileLayer('https://mt1.google.com/vt/lyrs=y&x={x}&y={y}&z={z}', {
                 maxZoom: 22,
-                attribution:'<a style="font-size: 12px;" href="#" target="_blank">© 2023 Google </a>'
+                attribution: '<a style="font-size: 12px;" href="#" target="_blank">© 2023 Google </a>'
             }),
             OpenStreetMap_Mapnik = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
                 maxZoom: 19,
-                attribution:'<a style="font-size: 12px; href="http://openstreetmap.org">OpenStreetMap</a>'
+                attribution: '<a style="font-size: 12px; href="http://openstreetmap.org">OpenStreetMap</a>'
             }),
             CartoDB_DarkMatter = L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
                 maxZoom: 19
             });
-            
-        
+
+
         // Varios Marcadores segun Estacion de Aforo
         var Ichocollo = L.marker([-15.66680, -70.82266], {
             icon: marcador_rojo,
             draggable: false,
-            attribution:'<a style="font-size: 12px;" href="#" target="_blank">Operación y Mantenimiento </a>',
+            attribution: '<a style="font-size: 12px;" href="#" target="_blank">Operación y Mantenimiento </a>',
             title: "Río Ichocollo"
-            }).bindPopup('<div class="popup-tabs">' +
+        }).bindPopup('<div class="popup-tabs">' +
             '<ul class="nav nav-tabs">' +
             '<li class="active"><a href="#tab1" data-toggle="tab">Caudal</a></li>' +
             '<li><a href="#tab2" data-toggle="tab">Volumen</a></li>' +
@@ -241,9 +248,9 @@
             '<div class="tab-pane" id="tab3"><div class="entry-img"> <img width="500" height="310" src="https://diar-peblt.github.io/Presa-Lagunillas/assets/img/404/404.gif" alt="" class="img-fluid"> </div> <h2 class="entry-title"> Sección en Construcción </h2></div>' +
             '</div>' +
             '</div>', {
-            maxWidth: "auto"
-            }); 
-            garganta_larga = L.marker([-15.72068, -70.70347], {
+                maxWidth: "auto"
+            });
+        garganta_larga = L.marker([-15.72068, -70.70347], {
                 icon: marcador_rojo,
                 draggable: false,
                 title: "Aforador Garganta Larga",
@@ -260,7 +267,7 @@
             boca_huataquita = L.marker([-15.65734, -70.46796], {
                 icon: marcador_azul,
                 draggable: false,
-                attribution:'<a style="font-size: 12px;" href="#" target="_blank">Operación y Mantenimiento </a>',
+                attribution: '<a style="font-size: 12px;" href="#" target="_blank">Operación y Mantenimiento </a>',
                 title: "Bocatoma Huataquita",
             }).bindPopup("<iframe width='600' height='310' src='https://datastudio.google.com/embed/reporting/5d9cb5f6-5a8a-457d-88ae-5dd450d0bd58/page/qX5SC' frameborder='0' style='border:0' allowfullscreen></iframe>", {
                 maxWidth: "auto"
@@ -320,20 +327,40 @@
                 title: "Captación Seda Juliaca",
             }).bindPopup("<iframe width='600' height='310' src='https://datastudio.google.com/embed/reporting/30c22d30-ec24-4af1-aef9-de74b721b047/page/qX5SC' frameborder='0' style='border:0' allowfullscreen></iframe>", {
                 maxWidth: "auto"
-            })
+            }),
+            //### PUNTOS DE AFORO COMPLEMENTARIOS
+            rio_verde = L.marker([-15.661361, -70.661777], {
+                icon: marcador_amarillo,
+                draggable: false,
+                title: "Río Cerrillos",
+            }).bindPopup("<iframe width='600' height='310' src='https://datastudio.google.com/embed/reporting/30c22d30-ec24-4af1-aef9-de74b721b047/page/qX5SC' frameborder='0' style='border:0' allowfullscreen></iframe>", {
+                maxWidth: "auto"
+            }),
+            rio_cerrillos = L.marker([-15.688853, -70.644095], {
+                icon: marcador_amarillo,
+                draggable: false,
+                title: "Río Cerrillos",
+            }).bindPopup("<iframe width='600' height='310' src='https://datastudio.google.com/embed/reporting/30c22d30-ec24-4af1-aef9-de74b721b047/page/qX5SC' frameborder='0' style='border:0' allowfullscreen></iframe>", {
+                maxWidth: "auto"
+            }),
+            rio_cabanillas = L.marker([-15.631129, -70.340912], {
+                icon: marcador_amarillo,
+                draggable: false,
+                title: "Río Cabanillas",
+            }).bindPopup("<iframe width='600' height='310' src='https://datastudio.google.com/embed/reporting/30c22d30-ec24-4af1-aef9-de74b721b047/page/qX5SC' frameborder='0' style='border:0' allowfullscreen></iframe>", {
+                maxWidth: "auto"
+            });
 
-        ;
-
-
-
-        //Agrupando los Marcadores de Tipo Proyecto
+        //Agrupando los Marcadores de Red de Captación
         var Captacion = L.layerGroup([Ichocollo, garganta_larga, boca_cabana_mañazo]);
 
-        //Agrupando los Marcadores de Tipo Estudio
+        //Agrupando los Marcadores de Red de Distribución
         var Distribución = L.layerGroup([boca_huataquita, captacion_huataquita, bocatoma_cabanilla, canal_cabana, canal_mañazo, bocatoma_yanarico,
             bocatoma_yocara, bocatoma_canteria, captacion_sedaj
         ]);
 
+        //Agrupando los Marcadores de Puntos Complementarios
+        var complementarios = L.layerGroup([rio_verde, rio_cerrillos, rio_cabanillas]);
 
         // Agrpando los Marcadores de Tipo Idea de Proyecto
 
@@ -351,7 +378,7 @@
             //[-15.421305, -70.841130]
             //],
 
-            layers: [OpenStreetMap_Mapnik, Captacion, Distribución]
+            layers: [OpenStreetMap_Mapnik, Captacion, Distribución, complementarios]
         });
 
         //BARRA DE ZOOM
@@ -380,6 +407,7 @@
             '<img src="./images/red_c_marker.png" width="15" height="15"/> Red de Captación': Captacion,
             //'<img src="https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-yellow.png" width="10" height="15"/> Estudios': Estudio,
             '<img src="./images/blue_c_marker.png" width="15" height="15"/> Red de Distribución': Distribución,
+            '<img src="./images/yellow_c_marker.png" width="15" height="15"/> Puntos Complementarios': complementarios,
         };
 
 
@@ -442,16 +470,18 @@
             position: 'topright' //bottomright
         }).addTo(map);
 
-       // create info legend
-        const legend = L.control({ position: "bottomleft" });
+        // create info legend
+        const legend = L.control({
+            position: "bottomleft"
+        });
 
-        legend.onAdd = function () {
-        let div = L.DomUtil.create("div", "description");
-        L.DomEvent.disableClickPropagation(div);
-        const text =
-            "<b>Importante 🚨 </b><br><br>En este portal se muestra información de la Red Hidrométrica de Captación y Distribución de Agua del Sector Hidráulico Mayor Lagunillas clase 'A' a cargo del proyecto Especial Binacional Lago Titicaca; aprobada bajo Resplucion Administrativa  Nº 017-2021-ANA-AAA.TIT-ALA.J. ";
-        div.insertAdjacentHTML("beforeend", text);
-        return div;
+        legend.onAdd = function() {
+            let div = L.DomUtil.create("div", "description");
+            L.DomEvent.disableClickPropagation(div);
+            const text =
+                "<b>Importante 🚨 </b><br><br>En este portal se muestra información de la Red Hidrométrica de Captación y Distribución de Agua del Sector Hidráulico Mayor Lagunillas clase 'A' a cargo del proyecto Especial Binacional Lago Titicaca; aprobada bajo Resplucion Administrativa  Nº 017-2021-ANA-AAA.TIT-ALA.J. ";
+            div.insertAdjacentHTML("beforeend", text);
+            return div;
         };
         legend.addTo(map);
     </script>
