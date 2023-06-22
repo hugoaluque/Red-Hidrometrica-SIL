@@ -318,7 +318,7 @@
                 maxWidth: "auto"
             }),
             //### PUNTOS DE AFORO COMPLEMENTARIOS
-            rio_verde = L.marker([-15.661361, -70.661777], {
+            rio_verde = L.marker([-15.68485, -70.63999], {
                 icon: marcador_amarillo,
                 draggable: false,
                 title: "Río Verde",
@@ -338,6 +338,41 @@
                 title: "Río Cabanillas",
             }).bindPopup("En Construcción", {
                 maxWidth: "auto"
+            }),
+            AIch_01 = L.marker([-15.59610,-70.94578], {
+                icon: marcador_amarillo,
+                draggable: false,
+                title: "Ichocollo - 01",
+            }).bindPopup("<iframe width='600' height='310' src='https://lookerstudio.google.com/embed/reporting/9e995f25-4b5a-4e49-8e55-c578b5410fb4/page/qX5SC' frameborder='0' style='border:0' allowfullscreen></iframe>", {
+                maxWidth: "auto"
+            }),
+            AIch_02 = L.marker([-15.59520, -70.94353], {
+                icon: marcador_amarillo,
+                draggable: false,
+                title: "Ichocollo - 02",
+            }).bindPopup("<iframe width='600' height='310' src='https://lookerstudio.google.com/embed/reporting/029e1f37-728a-4178-95b0-d7bdb28781d9/page/qX5SC' frameborder='0' style='border:0' allowfullscreen></iframe>", {
+                maxWidth: "auto"
+            }),
+            AIch_03 = L.marker([-15.60538, -70.92359], {
+                icon: marcador_amarillo,
+                draggable: false,
+                title: "Ichocollo - 03",
+            }).bindPopup("<iframe width='600' height='310' src='https://lookerstudio.google.com/embed/reporting/3ee22849-c1c3-4ec8-8c67-af71fef4cc24/page/qX5SC' frameborder='0' style='border:0' allowfullscreen></iframe>", {
+                maxWidth: "auto"
+            }),
+            AIch_04 = L.marker([-15.62367, -70.88908], {
+                icon: marcador_amarillo,
+                draggable: false,
+                title: "Ichocollo - 04",
+            }).bindPopup("<iframe width='600' height='310' src='https://lookerstudio.google.com/embed/reporting/9a56b9f7-0923-4c2d-b530-94c6319ddce6/page/qX5SC' frameborder='0' style='border:0' allowfullscreen></iframe>", {
+                maxWidth: "auto"
+            }),
+            AIch_05 = L.marker([-15.65865, -70.82606], {
+                icon: marcador_amarillo,
+                draggable: false,
+                title: "Ichocollo - 05",
+            }).bindPopup("<iframe width='600' height='310' src='https://lookerstudio.google.com/embed/reporting/29173a51-b4a8-4764-ade0-a53bc9a9818e/page/qX5SC' frameborder='0' style='border:0' allowfullscreen></iframe>", {
+                maxWidth: "auto"
             });
 
         //Agrupando los Marcadores de Red de Captación
@@ -349,7 +384,7 @@
         ]);
 
         //Agrupando los Marcadores de Puntos Complementarios
-        var complementarios = L.layerGroup([rio_verde, rio_cerrillos, rio_cabanillas]);
+        var complementarios = L.layerGroup([rio_verde, rio_cerrillos, rio_cabanillas,AIch_01,AIch_02,AIch_03,AIch_04,AIch_05]);
 
         // Agrpando los Marcadores de Tipo Idea de Proyecto
 
@@ -367,7 +402,7 @@
             //[-15.421305, -70.841130]
             //],
 
-            layers: [OpenStreetMap_Mapnik, Captacion, Distribución, complementarios]
+            layers: [Google, Captacion, Distribución, complementarios]
         });
 
         //BARRA DE ZOOM
