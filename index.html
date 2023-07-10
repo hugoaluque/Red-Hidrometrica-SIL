@@ -373,6 +373,13 @@
                 title: "Ichocollo - 05",
             }).bindPopup("<iframe width='600' height='310' src='https://lookerstudio.google.com/embed/reporting/29173a51-b4a8-4764-ade0-a53bc9a9818e/page/qX5SC' frameborder='0' style='border:0' allowfullscreen></iframe>", {
                 maxWidth: "auto"
+            }),
+            almosanche = L.marker([-15.56563, -69.95599], {
+                icon: marcador_amarillo,
+                draggable: false,
+                title: "Almozanche",
+            }).bindPopup("En Construcción", {
+                maxWidth: "auto"
             });
 
         //Agrupando los Marcadores de Red de Captación
@@ -384,7 +391,7 @@
         ]);
 
         //Agrupando los Marcadores de Puntos Complementarios
-        var complementarios = L.layerGroup([rio_verde, rio_cerrillos, rio_cabanillas,AIch_01,AIch_02,AIch_03,AIch_04,AIch_05]);
+        var complementarios = L.layerGroup([rio_verde, rio_cerrillos, rio_cabanillas,AIch_01,AIch_02,AIch_03,AIch_04,AIch_05, almosanche]);
 
         // Agrpando los Marcadores de Tipo Idea de Proyecto
 
