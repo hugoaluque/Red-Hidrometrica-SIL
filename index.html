@@ -318,6 +318,20 @@
                 maxWidth: "auto"
             }),
             //### PUNTOS DE AFORO COMPLEMENTARIOS
+            Canal_Huataquita = L.marker([-15.678822, -70.408825], {
+                icon: marcador_amarillo,
+                draggable: false,
+                title: "Canal Huataquita",
+            }).bindPopup("En Construcción", {
+                maxWidth: "auto"
+            }),
+            B_CM_CL = L.marker([-15.696447, -70.369613], {
+                icon: marcador_amarillo,
+                draggable: false,
+                title: "Canal de Derivación Cabana  - Mañazo (Sifón - Huataquita)",
+            }).bindPopup("En Construcción", {
+                maxWidth: "auto"
+            }),
             rio_verde = L.marker([-15.68485, -70.63999], {
                 icon: marcador_amarillo,
                 draggable: false,
@@ -332,14 +346,7 @@
             }).bindPopup("<iframe width='600' height='310' src='https://lookerstudio.google.com/embed/reporting/fcf44d45-009c-4e61-98b8-fe3e348acbae/page/qX5SC' frameborder='0' style='border:0' allowfullscreen></iframe>", {
                 maxWidth: "auto"
             }),
-            rio_cabanillas = L.marker([-15.631129, -70.340912], {
-                icon: marcador_amarillo,
-                draggable: false,
-                title: "Río Cabanillas",
-            }).bindPopup("En Construcción", {
-                maxWidth: "auto"
-            }),
-            AIch_01 = L.marker([-15.59610,-70.94578], {
+           AIch_01 = L.marker([-15.59610,-70.94578], {
                 icon: marcador_amarillo,
                 draggable: false,
                 title: "Ichocollo - 01",
@@ -391,7 +398,7 @@
         ]);
 
         //Agrupando los Marcadores de Puntos Complementarios
-        var complementarios = L.layerGroup([rio_verde, rio_cerrillos, rio_cabanillas,AIch_01,AIch_02,AIch_03,AIch_04,AIch_05, almosanche]);
+        var complementarios = L.layerGroup([rio_verde, rio_cerrillos,B_CM_CL,AIch_01,AIch_02,AIch_03,AIch_04,AIch_05, almosanche, Canal_Huataquita]);
 
         // Agrpando los Marcadores de Tipo Idea de Proyecto
 
