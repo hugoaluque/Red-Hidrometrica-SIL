@@ -346,7 +346,7 @@
             }).bindPopup("<iframe width='600' height='310' src='https://lookerstudio.google.com/embed/reporting/fcf44d45-009c-4e61-98b8-fe3e348acbae/page/qX5SC' frameborder='0' style='border:0' allowfullscreen></iframe>", {
                 maxWidth: "auto"
             }),
-           AIch_01 = L.marker([-15.59610,-70.94578], {
+            AIch_01 = L.marker([-15.59610, -70.94578], {
                 icon: marcador_amarillo,
                 draggable: false,
                 title: "Ichocollo - 01",
@@ -387,6 +387,13 @@
                 title: "Almozanche",
             }).bindPopup("<iframe width='600' height='310' src='https://lookerstudio.google.com/embed/reporting/48a41a9c-ee2c-4556-9e88-0cecb1c2f933/page/qX5SC' frameborder='0' style='border:0' allowfullscreen></iframe>", {
                 maxWidth: "auto"
+            }),
+            Lim_Cab_Tiracoma = L.marker([-15.690427, -70.328397], {
+                icon: marcador_amarillo,
+                draggable: false,
+                title: "Límite Cabana - Tiracoma",
+            }).bindPopup("<iframe width='600' height='310' src='https://lookerstudio.google.com/embed/reporting/83b9600a-8f95-4a38-b1f4-db0d423ef19e/page/qX5SC' frameborder='0' style='border:0' allowfullscreen></iframe>", {
+                maxWidth: "auto"
             });
 
         //Agrupando los Marcadores de Red de Captación
@@ -398,7 +405,7 @@
         ]);
 
         //Agrupando los Marcadores de Puntos Complementarios
-        var complementarios = L.layerGroup([rio_verde, rio_cerrillos,B_CM_CL,AIch_01,AIch_02,AIch_03,AIch_04,AIch_05, almosanche, Canal_Huataquita]);
+        var complementarios = L.layerGroup([rio_verde, rio_cerrillos, B_CM_CL, AIch_01, AIch_02, AIch_03, AIch_04, AIch_05, almosanche, Canal_Huataquita, Lim_Cab_Tiracoma]);
 
         // Agrpando los Marcadores de Tipo Idea de Proyecto
 
