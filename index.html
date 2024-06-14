@@ -10,7 +10,7 @@
     <meta name="theme-color" content="#000000">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>REd Hidromçetrica SIL</title>
+    <title>Red Hidrométrica - SIL </title>
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
@@ -25,7 +25,9 @@
     <link rel="stylesheet" href="css/leaflet-search.css" />
     <link rel="stylesheet" href="css/Control.MiniMap.css" />
     <link rel="stylesheet" href="css/style.css">
-
+    <link rel="stylesheet" type="text/css"
+    href="https://cdn.jsdelivr.net/gh/cferdinandi/tabby@12.0.0/dist/css/tabby-ui.min.css">
+  
     <link rel="apple-touch-icon" sizes="76x76" href="images/favicon-76.png">
     <link rel="apple-touch-icon" sizes="120x120" href="images/favicon-120.png">
     <link rel="apple-touch-icon" sizes="152x152" href="images/favicon-152.png">
@@ -42,120 +44,14 @@
     <script src="js/L.Control.MousePosition.js"></script>
     <script src="js/leaflet-search.js"></script>
     <script src="js/Control.MiniMap.js" type="text/javascript"></script>
-
+   
 </head>
 
 <body>
 
-    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <a class="navbar-brand" href="#">Selecciona el Punto de Aforo de Interes</a>
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li class="hidden-xs"><a href="#" data-toggle="collapse" data-target=".navbar-collapse.in" id="list-btn"><i class="fa fa-list white"></i></a></li>
-                </ul>
-            </div>
-            <!--/.navbar-collapse -->
-        </div>
-    </div>
-
-    <div id="container">
-        <div id="sidebar">
-            <div class="sidebar-wrapper">
-                <div class="panel panel-default" id="features">
-                    <div class="panel-heading">
-                        <h3 class="panel-title">Puntos de Aforo
-                            <button type="button" class="btn btn-xs btn-default pull-right" id="sidebar-hide-btn"><i class="fa fa-chevron-left"></i></button></h3>
-                    </div>
-
-
-
-                    <div id="boton">
-                        <button id="richo">Río Ichocollo</button> <br>
-                        <button id="agarganta">Aforador Garganta Larga</button><br>
-                        <button id="bcm">Bocatoma Cabana - Mañazo</button><br>
-                        <button id="bhuat">Bocatoma Huataquita</button><br>
-                        <button id="chuat">Captación Huataquita</button><br>
-                        <button id="bcab">Bocatoma Cabanilla</button><br>
-                        <button id="cncab">Canal Cabana</button><br>
-                        <button id="cnma">Canal Mañazo</button><br>
-                        <button id="byan">Bocatoma Yanarico</button><br>
-                        <button id="byoc">Bocatoma Yocará</button><br>
-                        <button id="bcant">Bocatoma Canteria</button><br>
-                        <button id="csj">Captación Seda Juliaca</button>
-                        <button id="stop">Detener Vuelo</button>
-                    </div>
-                    <div class="panel-body">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <label>Control de capas</label>
-                                <div id="out-control"></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <script type="text/javascript">
-                        var richo = [-15.66680, -70.82266];
-                        agarganta = [-15.72068, -70.70347];
-                        bcm = [-15.65959, -70.46939];
-                        bhuat = [-15.65734, -70.46796];
-                        chuat = [-15.67904, -70.40971];
-                        bcab = [-15.67103, -70.38460];
-                        cncab = [-15.70628, -70.35953];
-                        cnma = [-15.70673, -70.35971];
-                        byan = [-15.62643, -70.33333];
-                        byoc = [-15.59562, -70.29974];
-                        bcant = [-15.55887, -70.26945];
-                        csj = [-15.46719, -70.10607];
-
-
-                        document.getElementById('richo').onclick = function() {
-                            map.flyTo(richo, 18);
-                        };
-                        document.getElementById('agarganta').onclick = function() {
-                            map.flyTo(agarganta, 18);
-                        };
-                        document.getElementById('bcm').onclick = function() {
-                            map.flyTo(bcm, 18);
-                        };
-                        document.getElementById('bhuat').onclick = function() {
-                            map.flyTo(bhuat, 18);
-                        };
-                        document.getElementById('chuat').onclick = function() {
-                            map.flyTo(chuat, 18);
-                        };
-                        document.getElementById('bcab').onclick = function() {
-                            map.flyTo(bcab, 18);
-                        };
-                        document.getElementById('cncab').onclick = function() {
-                            map.flyTo(cncab, 18);
-                        };
-                        document.getElementById('cnma').onclick = function() {
-                            map.flyTo(cnma, 18);
-                        };
-                        document.getElementById('byan').onclick = function() {
-                            map.flyTo(byan, 18);
-                        };
-                        document.getElementById('byoc').onclick = function() {
-                            map.flyTo(byoc, 18);
-                        };
-                        document.getElementById('bcant').onclick = function() {
-                            map.flyTo(bcant, 18);
-                        };
-                        document.getElementById('csj').onclick = function() {
-                            map.flyTo(csj, 18);
-                        };
-                        document.getElementById('stop').onclick = function() {
-                            map.stop();
-                        };
-                    </script>
-                </div>
-            </div>
-        </div>
-        <div id="map"></div>
-    </div>
+    
+<div id="map"></div>
+    
     <script>
         //visualización de coordenadas del mouse
         //L.control.mousePosition().addTo(map);
@@ -219,7 +115,7 @@
         // Varios Mapas Base 
         var Google = L.tileLayer('https://mt1.google.com/vt/lyrs=y&x={x}&y={y}&z={z}', {
                 maxZoom: 22,
-                attribution: '<a style="font-size: 12px;" href="#" target="_blank">© 2023 Google </a>'
+                //attribution: '<a style="font-size: 12px;" href="#" target="_blank">© 2024 Google </a>'
             }),
             OpenStreetMap_Mapnik = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
                 maxZoom: 19,
@@ -234,7 +130,7 @@
         var Ichocollo = L.marker([-15.66680, -70.82266], {
             icon: marcador_rojo,
             draggable: false,
-            attribution: '<a style="font-size: 12px;" href="#" target="_blank">Operación y Mantenimiento </a>',
+            attribution: '<a style="font-size: 13px;" href="https://hugoaluque.github.io/WEB-Personal/" target="_blank">Por: HHAL </a>',
             title: "Río Ichocollo"
         }).bindPopup("<iframe width='600' height='310' src='https://lookerstudio.google.com/embed/reporting/532ddce7-2923-4c65-a12b-8f95c4088471/page/qX5SC' frameborder='0' style='border:0' allowfullscreen></iframe>", {
             maxWidth: "auto"
@@ -256,7 +152,7 @@
             boca_huataquita = L.marker([-15.65734, -70.46796], {
                 icon: marcador_azul,
                 draggable: false,
-                attribution: '<a style="font-size: 12px;" href="#" target="_blank">Operación y Mantenimiento </a>',
+                attribution: '<a style="font-size: 13px;" href="https://hugoaluque.github.io/WEB-Personal/" target="_blank">Por: HHAL </a>',
                 title: "Bocatoma Huataquita",
             }).bindPopup("<iframe width='600' height='310' src='https://datastudio.google.com/embed/reporting/5d9cb5f6-5a8a-457d-88ae-5dd450d0bd58/page/qX5SC' frameborder='0' style='border:0' allowfullscreen></iframe>", {
                 maxWidth: "auto"
@@ -321,6 +217,7 @@
             Canal_Huataquita = L.marker([-15.678822, -70.408825], {
                 icon: marcador_amarillo,
                 draggable: false,
+                attribution: '<a style="font-size: 13px;" href="https://hugoaluque.github.io/WEB-Personal/" target="_blank">Por: HHAL </a>',
                 title: "Canal Huataquita",
             }).bindPopup("<iframe width='600' height='310' src='https://lookerstudio.google.com/embed/reporting/3c29d201-4e82-4ac9-8833-bbb9b8885859/page/qX5SC' frameborder='0' style='border:0' allowfullscreen></iframe>", {
                 maxWidth: "auto"
@@ -466,11 +363,11 @@
 
         //visualización de coordenadas del mouse
         L.control.mousePosition({
-            position: 'bottomleft',
+            position: 'bottomright',
         }).addTo(map);
         //barra de escala
         L.control.scale({
-            position: 'bottomleft',
+            position: 'bottomright',
             metric: true,
         }).addTo(map);
 
@@ -515,20 +412,20 @@
             position: 'topright' //bottomright
         }).addTo(map);
 
-        // create info legend
-        const legend = L.control({
-            position: "bottomleft"
-        });
+        // // create info legend
+        // const legend = L.control({
+        //     position: "bottomleft"
+        // });
 
-        legend.onAdd = function() {
-            let div = L.DomUtil.create("div", "description");
-            L.DomEvent.disableClickPropagation(div);
-            const text =
-                "<b>Importante 🚨 </b><br><br>En este portal se muestra información de la Red Hidrométrica de Captación y Distribución de Agua del Sector Hidráulico Mayor Lagunillas clase 'A' a cargo del proyecto Especial Binacional Lago Titicaca; aprobada bajo Resplucion Administrativa  Nº 017-2021-ANA-AAA.TIT-ALA.J. ";
-            div.insertAdjacentHTML("beforeend", text);
-            return div;
-        };
-        legend.addTo(map);
+        // legend.onAdd = function() {
+        //     let div = L.DomUtil.create("div", "description");
+        //     L.DomEvent.disableClickPropagation(div);
+        //     const text =
+        //         "<b>Importante 🚨 </b><br><br>En este portal se muestra información de la Red Hidrométrica de Captación y Distribución de Agua del Sector Hidráulico Mayor Lagunillas clase 'A' a cargo del proyecto Especial Binacional Lago Titicaca; aprobada bajo Resplucion Administrativa  Nº 017-2021-ANA-AAA.TIT-ALA.J. ";
+        //     div.insertAdjacentHTML("beforeend", text);
+        //     return div;
+        // };
+        // legend.addTo(map);
     </script>
 </body>
 

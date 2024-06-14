@@ -40,3 +40,46 @@
       line-height: 120%;
       border: 1px solid grey;
     }
+/* Estilos para las pestañas */
+#tabs {
+  width: 100%;
+  max-width: 600px;
+}
+
+#tabs ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+#tabs ul li {
+  flex: 1;
+  text-align: center;
+  background-color: #f4f4f4;
+  border: 1px solid #ddd;
+  padding: 10px;
+  cursor: pointer;
+}
+
+#tabs ul li:hover {
+  background-color: #ddd;
+}
+
+#tabs div {
+  display: none;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-top: none;
+  background-color: #f4f4f4;
+}
+
+#tabs div:first-child {
+  display: block;
+}
+
+/* Estilos para los iframes */
+iframe {
+  display: block;
+  margin: 0 auto;
+}    
