@@ -44,12 +44,98 @@
     <script src="js/leaflet-search.js"></script>
     <script src="js/Control.MiniMap.js" type="text/javascript"></script>
 
+    <style>
+        #boton {
+            position: absolute;
+            top: 200px;
+            left: 10px;
+            z-index: 600;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        #boton button {
+            margin-bottom: 8px;
+        }
+    </style>
+
 </head>
 
 <body>
-
-
     <div id="map"></div>
+    <div id="boton">
+        <button id="richo">Río Ichocollo</button>
+        <button id="agarganta">Afor. Garganta Larga</button>
+        <button id="bcm">B. Cabana - Mañazo</button>
+        <button id="bhuat">B. Huataquita</button>
+        <button id="chuat">Cap. Huataquita</button>
+        <button id="bcab">B. Cabanilla</button>
+        <button id="cncab">Canal Cabana</button>
+        <button id="cnma">Canal Mañazo</button>
+        <button id="byan">B. Yanarico</button>
+        <button id="byoc">B. Yocará</button>
+        <button id="bcant">B. Canteria</button>
+        <button id="csj">Cap. Seda Juliaca</button>
+        <button id="stop">Detener Vuelo</button>
+    </div>
+
+    <script type="text/javascript">
+        var richo = [-15.66680, -70.82266];
+        agarganta = [-15.72068, -70.70347];
+        bcm = [-15.65959, -70.46939];
+        bhuat = [-15.65734, -70.46796];
+        chuat = [-15.67904, -70.40971];
+        bcab = [-15.67103, -70.38460];
+        cncab = [-15.70628, -70.35953];
+        cnma = [-15.70673, -70.35971];
+        byan = [-15.62643, -70.33333];
+        byoc = [-15.59562, -70.29974];
+        bcant = [-15.55887, -70.26945];
+        csj = [-15.46719, -70.10607];
+
+
+        document.getElementById('richo').onclick = function() {
+            map.flyTo(richo, 18);
+        };
+        document.getElementById('agarganta').onclick = function() {
+            map.flyTo(agarganta, 18);
+        };
+        document.getElementById('bcm').onclick = function() {
+            map.flyTo(bcm, 18);
+        };
+        document.getElementById('bhuat').onclick = function() {
+            map.flyTo(bhuat, 18);
+        };
+        document.getElementById('chuat').onclick = function() {
+            map.flyTo(chuat, 18);
+        };
+        document.getElementById('bcab').onclick = function() {
+            map.flyTo(bcab, 18);
+        };
+        document.getElementById('cncab').onclick = function() {
+            map.flyTo(cncab, 18);
+        };
+        document.getElementById('cnma').onclick = function() {
+            map.flyTo(cnma, 18);
+        };
+        document.getElementById('byan').onclick = function() {
+            map.flyTo(byan, 18);
+        };
+        document.getElementById('byoc').onclick = function() {
+            map.flyTo(byoc, 18);
+        };
+        document.getElementById('bcant').onclick = function() {
+            map.flyTo(bcant, 18);
+        };
+        document.getElementById('csj').onclick = function() {
+            map.flyTo(csj, 18);
+        };
+        document.getElementById('stop').onclick = function() {
+            map.stop();
+        };
+    </script>
+
+
 
     <script>
         //visualización de coordenadas del mouse
@@ -309,7 +395,7 @@
 
         //Agregando los grupos de Capas al Mapa
         var map = L.map('map', {
-            center: [-15.67758, -70.39955],
+            center: [-15.651022, -70.464158],
             zoom: 10,
             zoomControl: false,
             //maxBounds: [
@@ -327,12 +413,12 @@
             position: 'topleft'
         }).addTo(map);
         //GEOLOCALIZADOR
-        // var ubicacion = L.control.locate({
-        //     position: 'topleft',
-        //     strings: {
-        //         title: "Buscar mi Ubicación"
-        //     }
-        // }).addTo(map);
+        var ubicacion = L.control.locate({
+            position: 'topleft',
+            strings: {
+                title: "Buscar mi Ubicación"
+            }
+        }).addTo(map);
 
         // Agrupando los Mapas Base
         var baseMaps = {
@@ -340,8 +426,6 @@
             "OpenStreetMap": OpenStreetMap_Mapnik,
             "Cartografía Oscura": CartoDB_DarkMatter
         };
-
-
 
         // Creando Capas de Marcadores
         var Capas = {
@@ -379,17 +463,6 @@
             toggleDisplay: true,
             position: 'bottomright',
         }).addTo(map);
-
-
-        // Llamamos a getContainer.
-        // var htmlObject = control.getContainer();
-
-        // function controlFueraMapa() {
-        //     // Creamos la referencia al nuevo div.
-        //     var miControl = document.getElementById('out-control');
-        //     miControl.appendChild(htmlObject);
-        // }
-        // addEventListener('load', controlFueraMapa);
 
         //Adicionando Logo Institucional
 
